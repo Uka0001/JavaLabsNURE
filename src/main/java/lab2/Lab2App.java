@@ -11,10 +11,10 @@ public class Lab2App {
         int nNumber = app.getNumber();
         int[][] aMatrix = app.createAndPrintMatrix(app, nNumber);
         printMatrix(aMatrix);
-//        int[][] shiftDownMatrix = app.shiftDown(aMatrix, 1);
-//        printMatrix(shiftDownMatrix);
-//        int[][] shiftUpMatrix = app.shiftUp(aMatrix, 1);
-//        printMatrix(shiftUpMatrix);
+        int[][] shiftDownMatrix = app.shiftDown(aMatrix, 1);
+        printMatrix(shiftDownMatrix);
+        int[][] shiftUpMatrix = app.shiftUp(aMatrix, 1);
+        printMatrix(shiftUpMatrix);
         app.shiftRightAndLeft(aMatrix, 1, nNumber); // shifting left
         app.shiftRightAndLeft(aMatrix, 11, nNumber);
         app.shiftRightAndLeft(aMatrix, -23, nNumber);
