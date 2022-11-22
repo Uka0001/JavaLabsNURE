@@ -1,22 +1,67 @@
 package lab3;
 /*
-* B
+* B +
 * Определить класс Комплекс. Создать массив/список/множество размерности
 * n из комплексных координат. Передать его в метод, который выполнит сложение/умножение его элементов.
 *
-* C
-* Определить класс Прямая на плоскости (в пространстве), параметры кото- рой задаются
-* с помощью Рациональной Дроби. Определить точки пересе- чения прямой с осями координат.
+* C +
+* Определить класс Прямая на плоскости (в пространстве), параметры которой задаются
+* с помощью Рациональной Дроби. Определить точки пересечения прямой с осями координат.
 * Определить координаты пересечения двух прямых. Создать массив/список/множество объектов
 * и определить группы параллельных прямых.
 * */
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import static lab3.Straight.getGroupsParallel;
 
 public class LAb3App extends Complex {
     public static void main(String[] args) {
         bTask();
+        cTask();
+    }
+
+    private static void cTask() {
+        List<Straight> listLines = new ArrayList<>();
+        listLines.add(new Straight(2, -1, -3));
+        listLines.add(new Straight(-3, -5, 2));
+        listLines.add(new Straight(-3, -6, 2));
+        listLines.add(new Straight(-3, -8, 2));
+        listLines.add(new Straight(-3, -9, 4));
+        listLines.add(new Straight(-3, -5, 5));
+        listLines.add(new Straight(-1, -4, 4));
+        listLines.add(new Straight(-1, -1, 5));
+
+
+        //печатаем все уравнения прямых и их точки пересечения с осями X и Y
+        for (Straight line : listLines) {
+            System.out.printf("Прямая: %s;%s", line, System.lineSeparator());
+            System.out.printf("Точки пересечения с осями: %s, %s;%s",
+                    line.getPointIntersectionWithX(), line.getPointIntersectionWithY(), System.lineSeparator());
+            System.out.println();
+        }
+
+        //ищем пересечения прямых друг с другом (первые 2 из списка)
+        System.out.println("Точки пересечения 2-х прямых:");
+        System.out.printf("%s;%s%s;%s", listLines.get(0), System.lineSeparator(), listLines.get(1), System.lineSeparator());
+        System.out.printf("%s%s", listLines.get(0).getPointIntersectionLines(listLines.get(1)), System.lineSeparator());
+        System.out.println();
+
+        //объеденяем в группы параллельности прямых
+        Map<Straight, List<Straight>> groups = getGroupsParallel(listLines);
+
+        //печатаем группы параллельности
+        for (Map.Entry<Straight, List<Straight>> group : groups.entrySet()) {
+            if (group.getValue().size() > 0) {
+                System.out.printf("Прямая %s параллельна с:%s", group.getKey(), System.lineSeparator());
+                for (Straight line : group.getValue()) {
+                    System.out.printf("    %s;%s", line, System.lineSeparator());
+                }
+                System.out.println();
+            }
+        }
     }
 
     private static void bTask() {
