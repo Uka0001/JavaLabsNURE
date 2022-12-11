@@ -34,13 +34,13 @@ public class Straight {
     public String getPointIntersectionLines(Straight line) {
         String result = null;
         if (line != null) {
-            double coeffOne = (double) this.a / (double) line.a;
-            double coeffTwo = (double) this.b / (double) line.b;
-            double coeffThree = (double) this.c / (double) line.c;
+            double coefficientOne = (double) this.a / (double) line.a;
+            double coefficientTwo = (double) this.b / (double) line.b;
+            double coefficientThree = (double) this.c / (double) line.c;
 
-            if (coeffOne == coeffTwo && coeffOne == coeffThree) {
+            if (coefficientOne == coefficientTwo && coefficientOne == coefficientThree) {
                 result = "Прямые равны. Имеют бесконечное множество точек пересечения.";
-            } else if (coeffOne == coeffTwo && coeffOne != coeffThree) {
+            } else if (coefficientOne == coefficientTwo && coefficientOne != coefficientThree) {
                 result = "Прямые параллельны. Точек пересечения нет.";
             } else {
                 double y = (double) (line.a * this.c - this.a * line.c) / (double) (this.a * line.b - line.a * this.b);
@@ -65,39 +65,39 @@ public class Straight {
     }
 
     public boolean isParallel(Straight line) {
-        double coeffOne = (double) this.a / (double) line.a;
-        double coeffTwo = (double) this.b / (double) line.b;
-        double coeffThree = (double) this.c / (double) line.c;
-        return coeffOne == coeffTwo && coeffOne != coeffThree;
+        double coefficientOne = (double) this.a / (double) line.a;
+        double coefficientTwo = (double) this.b / (double) line.b;
+        double coefficientThree = (double) this.c / (double) line.c;
+        return coefficientOne == coefficientTwo && coefficientOne != coefficientThree;
     }
 
     public boolean isEquals(Straight line) {
-        double coeffOne = (double) this.a / (double) line.a;
-        double coeffTwo = (double) this.b / (double) line.b;
-        double coeffThree = (double) this.c / (double) line.c;
-        return coeffOne == coeffTwo && coeffOne == coeffThree;
+        double coefficientOne = (double) this.a / (double) line.a;
+        double coefficientTwo = (double) this.b / (double) line.b;
+        double coefficientThree = (double) this.c / (double) line.c;
+        return coefficientOne == coefficientTwo && coefficientOne == coefficientThree;
     }
 
     public static Map<Straight, List<Straight>> getGroupsParallel(List<Straight> list) {
-        Map<Straight, List<Straight>> map = new HashMap<>();
+        Map<Straight, List<Straight>> straightListHashMap = new HashMap<>();
         if (list != null && !list.isEmpty()) {
             boolean flag;
             while (!list.isEmpty()) {
                 flag = false;
                 Straight line = list.remove(0);
-                for (Straight lineMap : map.keySet()) {
+                for (Straight lineMap : straightListHashMap.keySet()) {
                     if (lineMap.isParallel(line)) {
-                        map.get(lineMap).add(line);
+                        straightListHashMap.get(lineMap).add(line);
                         flag = true;
                         break;
                     }
                 }
                 if (!flag) {
-                    map.put(line, new ArrayList<>());
+                    straightListHashMap.put(line, new ArrayList<>());
                 }
             }
         }
-        return map;
+        return straightListHashMap;
     }
 
     @Override

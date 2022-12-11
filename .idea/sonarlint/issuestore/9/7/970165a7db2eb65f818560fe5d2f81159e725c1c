@@ -1,0 +1,10 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õ¾š´ÿÿÿÿÿ
+M
+java:S2589+"7Remove this expression which always evaluates to "true"(†Áôõ
+D
+java:S1905/")Remove this unnecessary cast to "double".(È¼Àáúÿÿÿÿ
+Q
+java:S2864X"4Iterate over the "entrySet" instead of the "keySet".(íÿŸÔ8ä£Î‡Ê0
+H
+java:S11446"-Remove this unused private "getBlock" method.(À¨…¸ûÿÿÿÿ

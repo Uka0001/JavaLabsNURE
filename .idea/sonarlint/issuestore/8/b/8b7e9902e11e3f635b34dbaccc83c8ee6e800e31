@@ -1,0 +1,18 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õ¾š´ÿÿÿÿÿ
+U	java:S106("9Replace this use of System.out or System.err by a logger.(ï¹è‚8İğØ†Ê0
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(ÓĞ‰üÿÿÿÿ8ŞğØ†Ê0
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8àğØ†Ê0
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(Ğ›²ø8âğØ†Ê0
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(¦ºªÿ8µä†Ê0
+U	java:S1061"9Replace this use of System.out or System.err by a logger.(´å“8·ä†Ê0
+Z	java:S1062"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ºä†Ê0
+`
+java:S11559">Use isEmpty() to check whether the collection is empty or not.(—˜…«üÿÿÿÿ8èÙÖ‡Ê0
+T	java:S106:"9Replace this use of System.out or System.err by a logger.(¬ß˜i8Áä†Ê0
+Z	java:S106<"9Replace this use of System.out or System.err by a logger.(ÔíÂÉøÿÿÿÿ8Ää†Ê0
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8Åä†Ê0
+U	java:S106G"9Replace this use of System.out or System.err by a logger.(âµ‚8Éä†Ê0
+Z	java:S106I"9Replace this use of System.out or System.err by a logger.(°ĞÔ’ûÿÿÿÿ8Ëä†Ê0
+T	java:S106K"9Replace this use of System.out or System.err by a logger.(é«Ã8Íä†Ê0
+T	java:S106M"9Replace this use of System.out or System.err by a logger.(Ø€‡8Ğä†Ê0
