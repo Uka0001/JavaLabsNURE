@@ -18,10 +18,12 @@ public class Lab2App {
         app.shiftRightAndLeft(aMatrix, 1, nNumber); // shifting left
         app.shiftRightAndLeft(aMatrix, 11, nNumber);
         app.shiftRightAndLeft(aMatrix, -23, nNumber);
+        app.shiftRightAndLeft(aMatrix, 0, nNumber);
 
     }
 
     private int[][] shiftUp(int[][] matrix, int interval) {
+        System.out.println("Shifting up");
         return Stream.concat(
                         Arrays.stream(matrix, interval, matrix.length),
                         Arrays.stream(matrix, 0, interval))
@@ -39,6 +41,7 @@ public class Lab2App {
     }
 
     private int[][] shiftDown(int[][] matrix, int interval) {
+        System.out.println("Shifting down");
         return Stream.concat(
                         Arrays.stream(matrix, matrix.length - interval, matrix.length),
                         Arrays.stream(matrix, 0, matrix.length - interval))

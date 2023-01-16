@@ -1,5 +1,11 @@
 package lab1;
 
+/*
+Варіант В Завдання:
+2. Наоцінку4-варіантВ(с27):
+2) Наибольшееинаименьшеечисло.
+* */
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
